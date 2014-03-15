@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/default_photo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="1pt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/default_photo" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="5pt"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username_hint"
+            android:textColor="@color/links"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Title"
+            android:textColor="@color/username"
+            android:textSize="14sp"
+            android:textStyle="italic|bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/post_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/post_title"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Content"
+            android:textSize="12sp"
+            android:textColor="@color/content_text" />
+
+        <TextView
+            android:id="@+id/time_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/post_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2pt"
+            android:text="00:00"
+            android:textColor="@color/content_text"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

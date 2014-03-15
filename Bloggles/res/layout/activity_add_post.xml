@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@color/content_background">
+
+    <ScrollView 
+        android:scrollbars="vertical"
+        android:scrollbarTrackVertical="@color/content_text"
+        android:scrollbarFadeDuration="2"
+        android:layout_marginTop="10pt"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/title_field"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/hint_title"
+                android:background="@color/white"
+                android:selectAllOnFocus="false"
+                android:textColor="@color/name"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="12sp" 
+                android:padding="2pt"/>
+			<ScrollView
+			    android:id="@+id/details_scroll"
+			    android:scrollbars="vertical"
+		        android:scrollbarTrackVertical="@color/content_text"
+		        android:scrollbarFadeDuration="2"
+			    android:layout_width="match_parent"
+			    android:layout_height="50pt"
+                android:layout_below="@+id/title_field"
+                android:layout_marginTop="3pt"
+                android:background="@color/white">
+			    
+            <EditText
+                android:id="@+id/details_field"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:hint="@string/hint_desc"
+                android:selectAllOnFocus="false"
+                android:textColor="@color/name"
+                android:textColorHint="@color/black_overlay"
+                android:textSize="12sp" 
+                android:padding="2pt"/>
+			</ScrollView>
+
+
+            <Button
+                android:id="@+id/capture_button"
+                android:layout_width="23pt"
+                android:layout_height="21pt"
+                android:layout_marginTop="5pt"
+                android:layout_marginLeft="65dp"
+                android:layout_below="@+id/photo_preview"
+                android:background="@drawable/ic_camera"/>
+
+            <ImageView
+                android:id="@+id/photo_preview"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/details_scroll"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/default_photo" 
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/gallery_button"
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="65dp"
+                android:background="@drawable/ic_gallery" />
+
+        </RelativeLayout>
+
+    </ScrollView>     	 
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_background"
+    android:orientation="horizontal"
+    android:padding="5dp">
+    
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:bottom="3dp"
+        android:src="@drawable/default_photo" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5pt" >
+        
+       <TextView
+           android:id="@+id/name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Name"
+           android:textStyle="bold"
+           android:textSize="15sp" 
+           android:textColor="@color/links"/>
+
+    	<TextView
+    	    android:id="@+id/username"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_below="@+id/name"
+    	    android:layout_marginRight="10dp"
+    	    android:layout_marginTop="2pt"
+    	    android:text="@string/username_hint" 
+    	    android:textStyle="italic|bold"
+    	    android:textSize="13sp" 
+    	    android:textColor="@color/username"/>
+    </RelativeLayout>
+</LinearLayout>

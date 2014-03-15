@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/content_background">
+
+    <RelativeLayout 
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="47dp">
+        <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/default_photo" 
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/username_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_label"
+        android:layout_below="@+id/name_label"
+        android:layout_marginTop="2pt"
+        android:text="@string/label_username"
+        android:textColor="@color/username" 
+        android:textSize="13sp"/>
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_photo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2pt"
+        android:layout_toRightOf="@+id/profile_photo"
+        android:text="@string/label_name"
+        android:textColor="@color/name"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+    
+    <Button 
+        android:id="@+id/change_photo_button"
+        android:layout_width="fill_parent"
+       	android:layout_height="65dp"
+       	android:layout_below="@+id/username_label"
+       	android:layout_alignLeft="@+id/name_label"
+       	android:layout_alignBottom="@+id/profile_photo"
+       	android:layout_marginTop="2pt"
+       	android:background="@color/button_color"
+        android:text="Change Photo"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp">
+
+     	<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/first_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/label_firstName"
+                android:textColor="@color/header_background"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/last_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_name_label"
+                android:layout_marginTop="25dp"
+                android:text="@string/label_lastName"
+                android:textColor="@color/header_background"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/last_name_label"
+                android:layout_marginTop="25dp"
+                android:text="@string/label_password"
+                android:textColor="@color/header_background"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/last_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/last_name_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/first_name"
+                android:inputType="textPersonName" 
+                android:textColor="@color/content_text"
+                android:textSize="13sp">
+            </EditText>
+
+            <EditText
+                android:id="@+id/current_password"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/password_label"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/last_name"
+                android:layout_marginTop="5dp"
+                android:hint="@string/hint_currentPassword"
+                android:inputType="textPassword" 
+                android:textColor="@color/content_text"
+                android:textSize="13sp"
+		        android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/new_password"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/current_password"
+                android:layout_marginTop="5dp"
+                android:hint="@string/hint_newPassword"
+                android:inputType="textPassword" 
+                android:textColor="@color/content_text"
+                android:textSize="13sp"
+		        android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/retype_new_password"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/new_password"
+                android:layout_marginTop="5dp"
+                android:hint="@string/hint_retypeNewPassword"
+                android:inputType="textPassword"
+                android:textColor="@color/content_text"
+                android:textSize="13sp"
+		        android:visibility="gone"/>
+
+		    <Button 
+		        android:id="@+id/cancel_button"
+		        android:layout_width="73dp"
+		        android:layout_height="40dp"
+		        android:layout_alignBaseline="@+id/save_password_button"
+		        android:layout_alignBottom="@+id/save_password_button"
+		        android:layout_alignRight="@+id/retype_new_password"
+		        android:layout_marginLeft="1dp"
+		        android:background="@color/button_color"
+		        android:text="@string/button_cancel" 
+		        android:textSize="14sp"
+				android:textColor="@color/white"
+		        android:visibility="gone"/>
+		
+		    <Button
+		        android:id="@+id/save_password_button"
+		        android:layout_width="73dp"
+		        android:layout_height="40dp"
+		        android:layout_below="@+id/retype_new_password"
+		        android:layout_toLeftOf="@+id/cancel_button"
+		        android:layout_alignLeft="@+id/retype_new_password"
+		        android:layout_marginRight="1dp"
+		        android:layout_marginTop="3pt"
+		        android:background="@color/button_color"
+		        android:text="@string/button_save" 
+		        android:textSize="14sp"
+		        android:textColor="@color/white"
+		        android:visibility="gone"/>
+
+		    <EditText
+		        android:id="@+id/first_name"
+		        android:layout_width="150dp"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/first_name_label"
+		        android:layout_alignBottom="@+id/first_name_label"
+		        android:layout_alignParentRight="true"
+		        android:inputType="textPersonName"
+		        android:textColor="@color/content_text"
+		        android:textSize="13sp" >
+		        <requestFocus/>
+		   </EditText>
+
+		    <Button
+		        android:id="@+id/change_password_button"
+		        android:layout_width="150dp"
+		        android:layout_height="40dp"
+		        android:layout_below="@+id/last_name"
+		        android:layout_marginTop="3pt"
+		        android:layout_alignParentRight="true"
+		        android:background="@color/button_color"
+		        android:text="@string/button_change"
+		        android:textColor="@color/white"
+		        android:textSize="14sp" />
+            
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

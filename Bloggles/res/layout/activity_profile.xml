@@ -1,0 +1,215 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/content_background">
+
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="47dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/jane" 
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/username_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_label"
+        android:layout_below="@+id/name_label"
+        android:layout_marginTop="3pt"
+        android:text="@string/label_username"
+        android:textColor="@color/username" />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_photo"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7pt"
+        android:layout_toRightOf="@+id/profile_photo"
+        android:text="@string/label_name"
+        android:textColor="@color/name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10pt"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center" >
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+		        android:id="@+id/membership_date_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dp"
+		        android:text="@string/label_memberSince"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+            
+            <TextView
+		        android:id="@+id/last_login_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/membership_date_label"
+		        android:layout_marginTop="18dp"
+		        android:text="@string/label_lastLogin"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+
+            <TextView
+		        android:id="@+id/blog_posts_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/last_login_label"
+		        android:layout_marginTop="18dp"
+		        android:text="@string/label_blogPosts"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+                
+          	<TextView
+		        android:id="@+id/date_last_posted_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/blog_posts_label"
+		        android:layout_marginTop="18dp"
+		        android:text="@string/label_lastPosted"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+            
+          	<TextView
+		        android:id="@+id/followers_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/date_last_posted_label"
+		        android:layout_marginTop="18dp"
+		        android:text="@string/label_numberOfFollowers"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+          	
+          	<TextView
+		        android:id="@+id/following_label"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/followers_label"
+		        android:layout_marginTop="18dp"
+		        android:text="@string/following"
+		        android:textColor="@color/header_background"
+		        android:textSize="13sp" />
+          	
+            <TextView
+                android:id="@+id/membership_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/last_login_label"
+                android:layout_alignLeft="@+id/blog_posts"
+                android:layout_alignBaseline="@+id/membership_date_label"
+                android:layout_alignBottom="@+id/membership_date_label"
+                android:text="@string/value_memberSince"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/last_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/last_login_label"
+                android:layout_alignBottom="@+id/last_login_label"
+                android:layout_alignLeft="@+id/blog_posts"
+                android:text="@string/value_lastLogin"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/blog_posts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/date_last_posted_label"
+                android:layout_marginLeft="17dp"
+                android:layout_toRightOf="@+id/date_last_posted_label"
+                android:text="@string/value_blogPosts"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+            
+            <TextView
+                android:id="@+id/date_last_posted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/blog_posts"
+                android:layout_alignBaseline="@+id/date_last_posted_label"
+                android:layout_alignBottom="@+id/date_last_posted_label"
+                android:text="@string/value_lastPosted"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+                        
+            <TextView 
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/blog_posts"
+                android:layout_alignBaseline="@+id/followers_label"
+                android:layout_alignBottom="@+id/followers_label"
+                android:text="@string/value_numberOfFollowers"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+
+            <TextView 
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/blog_posts"
+                android:layout_alignBaseline="@+id/following_label"
+                android:layout_alignBottom="@+id/following_label"
+                android:text="10"
+                android:textColor="@color/content_text"
+                android:textSize="13sp" />
+            
+            <Button
+                android:id="@+id/blog_posts_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/blog_posts"
+                android:layout_alignBottom="@+id/blog_posts"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_view" />
+
+            <Button
+                android:id="@+id/followers_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/followers"
+                android:layout_alignBottom="@+id/followers"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_view" />
+            
+            <Button
+                android:id="@+id/following_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/following"
+                android:layout_alignBottom="@+id/following"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_view" />
+            
+        </RelativeLayout>
+    </ScrollView>
+ 
+</LinearLayout>

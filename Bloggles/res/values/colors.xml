@@ -1,0 +1,15 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#fff</color>
+    <color name="content_background">#f8efdb</color>
+    <color name="name">#898c60</color>
+    <color name="username">#72675e</color>
+    <color name="content_text">#7d6962</color>
+    <color name="header_background">#0a505a</color>
+	<color name="links">#c0c078</color>
+	<color name="button_color">#3e5b53</color>
+	<color name="button_shadow">#3b7a69</color>
+	<color name="unfollow_button">#CC0000</color>
+	<color name="follow_button">#004c00</color>
+</resources>
