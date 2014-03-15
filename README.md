@@ -8,6 +8,6 @@ Bloggles
 Bloggles is an Android application. 
 
 
-### Contributos 
+### Contributors 
 * Marjorie Bongbong
 * Claire Echiverri
